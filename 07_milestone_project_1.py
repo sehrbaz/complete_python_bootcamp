@@ -4,7 +4,7 @@ This is a Tic Tac Toe game written by Farid (@sehrbaz) as part of
 Complete Python Bootcamp.
 This is my first written program except some scriipts written during my
 devops times and functions that I have wrtitten to solve coding bat problems.
-
+http://www.zfarid.com
 All my codes are available here: https://github.com/sehrbaz
 
 Follow me here: https://twitter.com/sehrbaz
@@ -64,32 +64,32 @@ def moving_p(p):
     """Function for moving for both players."""
     global board
     valid = False
-    print "Hint Board: "
+    print("Hint Board: ")
     print_l(hb)
-    print
-    print
+    print()
+    print()
     while not valid:
         try:
-            move = raw_input(
+            move = input(
                 'Player %s please select your move by selecting number: '
                 % (p))
             move = int(move)
             if move >= 1 and move <= 9 and board[move] not in("X", "O"):
                 board[move] = p
                 print_l(board)
-                print
-                print
+                print()
+                print()
                 break
             else:
                 print('Wrong Move try again')
         except Exception:
-            print move + " is not a valid move! Please try again.\n"
+            print(move + " is not a valid move! Please try again.\n")
 
 
 # The real game starts here. :)
 while not stop:
     reset_game()
-    print
+    print()
     print('New Game started:')
     print_l(board)
     while not win or not tie:
@@ -103,7 +103,7 @@ while not stop:
         check_tie(board)
         if tie or win:
             break
-    retry = raw_input('"q" to quit, any other input will start a new game: ')
+    retry = input('"q" to quit, any other input will start a new game: ')
     if retry == 'q':
         stop = True
         break
